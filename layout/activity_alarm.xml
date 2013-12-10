@@ -1,0 +1,148 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LunchTe"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/wqweqw" >
+
+    <Button
+        android:id="@+id/Bfast"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_x="4dp"
+        android:layout_y="835dp"
+        android:onClick="nextFrame"
+        android:text="Remove Baby" />
+
+    <Button
+        android:id="@+id/DinnerTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="19dp"
+        android:layout_y="694dp"
+        android:text="Set Time" />
+
+    <TextView
+        android:id="@+id/DinnerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="20dp"
+        android:layout_y="662dp"
+        android:text="Dinner"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Switch
+        android:id="@+id/switch3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="162dp"
+        android:layout_y="708dp"
+        android:text="Switch" />
+
+    <Button
+        android:id="@+id/SnackTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="17dp"
+        android:layout_y="500dp"
+        android:text="Set Time" />
+
+    <TextView
+        android:id="@+id/SnackText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="17dp"
+        android:layout_y="470dp"
+        android:text="Snack"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Switch
+        android:id="@+id/switch4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="162dp"
+        android:layout_y="516dp"
+        android:text="Switch" />
+
+    <Button
+        android:id="@+id/LunchTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="15dp"
+        android:layout_y="261dp"
+        android:text="Set Time" />
+
+    <TextView
+        android:id="@+id/LunchText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="13dp"
+        android:layout_y="229dp"
+        android:text="Lunch"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="161dp"
+        android:layout_y="268dp"
+        android:text="Switch" />
+
+    <Button
+        android:id="@+id/BfastTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="5dp"
+        android:layout_y="44dp"
+        android:text="Set Time" />
+
+    <TextView
+        android:id="@+id/BfastText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="4dp"
+        android:layout_y="12dp"
+        android:text="Breakfast"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="154dp"
+        android:layout_y="57dp"
+        android:text="Switch" />
+
+    <Button
+        android:id="@+id/SLunch"
+        android:layout_width="218dp"
+        android:layout_height="wrap_content"
+        android:layout_x="358dp"
+        android:layout_y="261dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/SSnack"
+        android:layout_width="223dp"
+        android:layout_height="wrap_content"
+        android:layout_x="354dp"
+        android:layout_y="515dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/SDinner"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_x="346dp"
+        android:layout_y="704dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/Sbfast"
+        android:layout_width="216dp"
+        android:layout_height="wrap_content"
+        android:layout_x="362dp"
+        android:layout_y="48dp"
+        android:text="Button" />
+
+</AbsoluteLayout>
