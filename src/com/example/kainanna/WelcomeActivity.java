@@ -14,6 +14,7 @@ public class WelcomeActivity extends Activity {
 
 	
 	baby_DAO bd = new baby_DAO(this);
+	Meal_DAO md = new Meal_DAO(this);
 	Intent intent;
 	List<Baby> lb = new ArrayList<Baby>();
 	Baby b = new Baby();
@@ -21,7 +22,11 @@ public class WelcomeActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_welcome);
-		Log.v("DB", ""+bd.checkTableExist());
+		md.deleteData();
+		md.createTable();
+		md.addBaby();
+		
+		
 		
 		
 	   if(bd.checkTableExist() ==  false){

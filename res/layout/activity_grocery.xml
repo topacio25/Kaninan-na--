@@ -2,12 +2,12 @@
     android:id="@+id/Grocery"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/wqweqw" >
+    android:background="@drawable/bg" >
 
     <ListView
         android:id="@+id/listView1"
         android:layout_width="match_parent"
-        android:layout_height="700dp"
+        android:layout_height="639dp"
         android:layout_x="0dp"
         android:layout_y="1dp" >
     </ListView>
@@ -17,53 +17,53 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="144dp"
         android:layout_height="wrap_content"
-        android:layout_x="8dp"
-        android:layout_y="723dp"
+        android:layout_x="6dp"
+        android:layout_y="692dp"
         android:text="Breakfast" />
-
-    <Button
-        android:id="@+id/Go"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="134dp"
-        android:layout_height="wrap_content"
-        android:layout_x="11dp"
-        android:layout_y="802dp"
-        android:text="Go" />
 
     <Button
         android:id="@+id/Dinner"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="158dp"
         android:layout_height="wrap_content"
-        android:layout_x="435dp"
-        android:layout_y="723dp"
+        android:layout_x="434dp"
+        android:layout_y="692dp"
         android:text="Dinner" />
-
-    <Button
-        android:id="@+id/Grow"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_x="439dp"
-        android:layout_y="800dp"
-        android:text="Grow" />
 
     <Button
         android:id="@+id/Lunch"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="132dp"
         android:layout_height="wrap_content"
-        android:layout_x="233dp"
-        android:layout_y="727dp"
+        android:layout_x="232dp"
+        android:layout_y="696dp"
         android:text="Lunch" />
+
+    <Button
+        android:id="@+id/Grow"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_x="437dp"
+        android:layout_y="750dp"
+        android:text="Grow" />
 
     <Button
         android:id="@+id/Glow"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:layout_x="241dp"
-        android:layout_y="800dp"
+        android:layout_x="232dp"
+        android:layout_y="746dp"
         android:text="Glow" />
+
+    <Button
+        android:id="@+id/Go"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="134dp"
+        android:layout_height="wrap_content"
+        android:layout_x="9dp"
+        android:layout_y="741dp"
+        android:text="Go" />
 
 </AbsoluteLayout>

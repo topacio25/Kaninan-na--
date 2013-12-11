@@ -778,6 +778,11 @@ SQLiteDatabase db = this.getWritableDatabase();
 		db.execSQL(synthax);
 	}
 	
+	public void deleteData(){
+		SQLiteDatabase db = this.getWritableDatabase();
+		db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
+	}
+	
 	
 
 }

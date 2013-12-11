@@ -14,6 +14,7 @@ import android.app.TimePickerDialog.OnTimeSetListener;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
@@ -22,11 +23,13 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
 public class Alarm extends Activity {
 	Button SetBfast, SetLunch, SetSnack, SetDinner, DBaby, SBfast, SLunch, SSnack, SDinner;
+	TextView bfast, lunch, snack, dinner;
 	baby_DAO bd = new baby_DAO(this);
 	Meal_DAO md = new Meal_DAO(this);
 	SuggestFood sf = new SuggestFood();
@@ -36,6 +39,7 @@ public class Alarm extends Activity {
 	Boolean isBfast = false, isLunch = false, isSnack = false, isDinner = false;
 	TimePickerDialog tpd;
 	DatePickerDialog dpd;
+	int yellow = Color.YELLOW;
 	
 	final static int RQS_1 = 1;
 
@@ -48,7 +52,15 @@ public class Alarm extends Activity {
      SetLunch = (Button) findViewById(R.id.LunchTime);
      SetSnack = (Button) findViewById(R.id.SnackTime);
      SetDinner = (Button) findViewById(R.id.DinnerTime);
+     
+     SetBfast.setTextColor(yellow);
+     SetLunch.setTextColor(yellow);
+     SetSnack.setTextColor(yellow);
+     SetDinner.setTextColor(yellow);
+     
      DBaby = (Button) findViewById(R.id.Bfast);
+     DBaby.setTextColor(yellow);
+     
      SBfast = (Button) findViewById(R.id.Sbfast);
      SLunch = (Button) findViewById(R.id.SLunch);
      SSnack = (Button) findViewById(R.id.SSnack);
@@ -59,10 +71,30 @@ public class Alarm extends Activity {
      sSnack = (Switch) findViewById(R.id.switch4);
      sDinner = (Switch) findViewById(R.id.switch3);
      
+     sBfast.setTextColor(yellow);
+     sLunch.setTextColor(yellow);
+     sSnack.setTextColor(yellow);
+     sDinner.setTextColor(yellow);
+     
+     bfast = (TextView) findViewById(R.id.BfastText);
+     lunch = (TextView) findViewById(R.id.LunchText);
+     snack = (TextView) findViewById(R.id.SnackText);
+     dinner = (TextView) findViewById(R.id.DinnerText);
+     
+     bfast.setTextColor(yellow);
+     lunch.setTextColor(yellow);
+     snack.setTextColor(yellow);
+     dinner.setTextColor(yellow);
+     
      sBfast.setEnabled(false);
      sLunch.setEnabled(false);
      sSnack.setEnabled(false);
      sDinner.setEnabled(false);
+     
+     SBfast.setTextColor(yellow);
+     SLunch.setTextColor(yellow);
+     SSnack.setTextColor(yellow);
+     SDinner.setTextColor(yellow);
     
      SBfast.setText(sf.suggestFood(md.getBfast()));
      SLunch.setText(sf.suggestFood(md.getLunch()));

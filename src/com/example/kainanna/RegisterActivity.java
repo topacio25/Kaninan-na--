@@ -4,11 +4,14 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.View.OnFocusChangeListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,7 +25,8 @@ public class RegisterActivity extends Activity {
 	private String gender = "";
 	
 	EditText nameText, ageText;
-	Button Male, Female;
+	TextView title, genders, gday;
+	Button Male, Female, submit;
 	Spinner s;
 
 	@Override
@@ -40,19 +44,36 @@ public class RegisterActivity extends Activity {
 		
 		s = (Spinner) findViewById(R.id.spinner1);
 		
+		title = (TextView) findViewById(R.id.BfastText);
+		genders = (TextView) findViewById(R.id.textView4);
+		gday = (TextView) findViewById(R.id.textView7);
+		title.setTextColor(Color.YELLOW);
+		genders.setTextColor(Color.YELLOW);
+		gday.setTextColor(Color.YELLOW);
+		
 		nameText = (EditText) findViewById(R.id.foodname);
 		ageText = (EditText) findViewById(R.id.editText2);
 		
 		Male = (Button) findViewById(R.id.MaleGen);
+		Male.setCompoundDrawablesWithIntrinsicBounds(null, null, null, getResources().getDrawable(R.drawable.male));
 		Female = (Button) findViewById(R.id.FemaleGen);
+		Female.setCompoundDrawablesWithIntrinsicBounds(null, null, null, getResources().getDrawable(R.drawable.female));
+		submit = (Button) findViewById(R.id.Bfast);
+		submit.setText("Tell Me!");
+		submit.setTextColor(Color.YELLOW);
+		
+		nameText.setTextColor(Color.YELLOW);
+		ageText.setTextColor(Color.YELLOW);
 		
 		Male.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				gender = Male.getText().toString();
+				Male.setCompoundDrawablesWithIntrinsicBounds(null, null, null, getResources().getDrawable(R.drawable.ismale));
+				Female.setCompoundDrawablesWithIntrinsicBounds(null, null, null, getResources().getDrawable(R.drawable.female));
+				gender = "B";
 				Log.v("Gender", gender);
-				Female.setVisibility(0);
+	
 				
 			}
 		});
@@ -61,9 +82,11 @@ public class RegisterActivity extends Activity {
 			
 			@Override
 			public void onClick(View arg0) {
-				gender = Female.getText().toString();
+				Female.setCompoundDrawablesWithIntrinsicBounds(null, null, null, getResources().getDrawable(R.drawable.isfemale));
+				Male.setCompoundDrawablesWithIntrinsicBounds(null, null, null, getResources().getDrawable(R.drawable.male));
+				gender = "G";
 				Log.v("Gender", gender);
-				Male.setVisibility(0);
+
 				
 			}
 		});
@@ -119,6 +142,13 @@ public class RegisterActivity extends Activity {
 		if(gender.isEmpty()){
 			 alert.setTitle("Warning");
 			 alert.setMessage("Please Choose your Baby's gender.");
+			 alert.show();
+			 return false;
+		}
+		
+		if(Integer.parseInt(ageText.getText().toString()) > 7){
+			 alert.setTitle("Warning");
+			 alert.setMessage("Please select an acceptable age for a baby or toddler it can be from age 0 up to 7");
 			 alert.show();
 			 return false;
 		}

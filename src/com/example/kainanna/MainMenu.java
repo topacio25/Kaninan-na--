@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.app.TabActivity;
 import android.content.Intent;
+import android.util.Log;
 import android.view.Menu;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
@@ -27,6 +28,8 @@ public class MainMenu extends TabActivity {
        tab2spec.setIndicator("Grocery");
        Intent tab2Intent = new Intent(this, Grocery.class);
        tab2spec.setContent(tab2Intent);
+       
+  
 
 
        // Adding all TabSpec to TabHost
@@ -42,6 +45,7 @@ public class MainMenu extends TabActivity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main_menu, menu);
+		Log.v("ASD", "LOL");
 		return true;
 	}
 

@@ -8,6 +8,7 @@ import java.util.List;
 import android.os.Bundle;
 import android.app.Activity;
 import android.database.SQLException;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
@@ -24,6 +25,7 @@ public class Grocery extends Activity {
 		Meal_DAO m = new Meal_DAO(this);
 		List<Meals> m1 = new ArrayList<Meals>();
 		Button bfast, lunch, dinner, go, glo, gro;
+		int yellow = Color.YELLOW;
 		//DBHelper d = new DBHelper(this);
 		//DAdapter db = new DAdapter(this);
 		
@@ -39,12 +41,16 @@ public class Grocery extends Activity {
 		go = (Button) findViewById(R.id.Go);
 		glo = (Button) findViewById(R.id.Glow);
 		gro = (Button) findViewById(R.id.Grow);
-		int x= m.getDATA();
-		Log.v("out", x+".");
-		m.addBaby();
 		m1 = m.getMeals();
 		ArrayAdapter<Object> listAdapter = new ArrayAdapter<Object>(this, android.R.layout.simple_list_item_1, m1.toArray());
 		l.setAdapter(listAdapter);
+		
+		bfast.setTextColor(yellow);
+		lunch.setTextColor(yellow);
+		dinner.setTextColor(yellow);
+		go.setTextColor(yellow);
+		glo.setTextColor(yellow);
+		gro.setTextColor(yellow);
 		
 		l.setOnItemClickListener(new OnItemClickListener() {
 
